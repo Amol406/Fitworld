@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>fit world</title>
+    <style>
+  body{
+      background-color: #262626;
+  } 
+  h2{
+          color: white;
+          font-family: 'Pacifico', cursive;
+      }    
+.picture-container{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 80px;
+}
+.picture{
+    width: 140px;
+    height: 140px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+     background-image: url("avatar.jpg");
+     background-size: cover;
+}
+.picture:hover{
+    border-color: #262626;
+}
+.content.ct-wizard-green .picture:hover{
+    border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+    border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+    border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+    border-color: #ff3b30;
+}
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.picture-src{
+    width: 100%;
+}
+h4{
+    color: white;
+    margin-top: 40px;
+}
+.well{
+    margin-top: 60px;
+}
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Profile</h2>
+    <div class="container">
+        <div class="picture-container">
+            <div class="picture" id="picture">
+                <input type="file" id="wizard-picture" class="">
+            </div>
+            <h4>HARISH & AMOL</h4>
+            <div class="well well-sm" class="well">Edit Profile</div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#wizard-picture").change(function(){
+                readURL(this);
+            });
+        });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            console.log(input.files[0])
+            reader.onload = function (e) {
+                console.log(e.target.result)
+                $('#picture').css('background-image', 'url(' + e.target.result + ')').fadeIn('slow');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

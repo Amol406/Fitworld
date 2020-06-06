@@ -1,0 +1,21 @@
+{
+  "name": "iide_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
